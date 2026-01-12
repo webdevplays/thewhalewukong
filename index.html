@@ -106,14 +106,7 @@
       z-index: 1;
     }
 
-    .header-image-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('images/2.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-    }
+    
 
     nav {
       position: relative;
@@ -255,7 +248,7 @@
     }
 
     .featured-image-container {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -572,7 +565,31 @@
         </div>
       </div>
     </nav>
+    <style>
+      /* Container for the whole section (optional, but useful) */
+.video-background-holder {
+  position: relative;
+  height: 100vh; /* Viewport height */
+  overflow: hidden;
+}
 
+/* Style the video element itself */
+#background-video {
+  position: fixed; /* Fixes the video to the viewport background */
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1; /* Puts the video behind other content */
+  object-fit: cover; /* Ensures the video covers the entire area without distortion */
+}
+    </style>
+<div class="video-background-holder">
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="/vid.MP4" type="video/mp4">
+    <!-- You can add more source elements for cross-browser compatibility (e.g., .webm or .ogv) -->
+    Your browser does not support the video tag.
+  </video>
     <div class="hero container">
       <div class="hero-icons">
         <svg class="icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -583,23 +600,31 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
       </div>
-      <h1>World of Warcraft’s Warchief <span class="text-orange">THRALL</span></h1>
-      <p class="hero-subtitle">CA: 0xE2E48EF406eB5765F8E072D74223E00bDa902e0d</p>
+      <h1>THE WHALE<span class="text-orange">WUKONG</span></h1>
+      <p class="hero-subtitle">CA: 000000000000000000000000000000</p>
       <p class="hero-description">
-        On April 25, 2012, an 18-year-old Vitalik Buterin published a visionary article
-        that would forever link World of Warcraft's legendary Warchief with the future of digital currency.
-      </p>
+        Whale Wukong is the ocean-born Monkey King, a fusion of ancient legend and modern dominance. 
+        Carrying the fearless spirit of Wukong and the sheer power of a whale, he moves the tides, 
+        breaks limits, and commands the deep with unstoppable strength—symbolizing intelligence, 
+        rebellion, and overwhelming force in one mythical form.
+      </p>&nbsp;
+           <video autoplay muted loop playsinline style="display: flex; margin: 0 auto; border: #5a3210 5px solid; border-radius: 15px; width: 100%; height: 80%; max-width: 600px;">
+    <source src="/vid.MP4" type="video/mp4">
+    <!-- You can add more source elements for cross-browser compatibility (e.g., .webm or .ogv) -->
+    Your browser does not support the video tag.
+  </video>
     </div>
-  </header>
+
+  </header>&nbsp;&nbsp;
 
   <section class="section-featured">
     <div class="container">
       <div class="featured-image-container">
         <div class="featured-image-wrapper">
-          <img src="images/1.png" alt="Thrall wearing a Bitcoin belt buckle" class="featured-image">
+          <img src="/wukong_logo.jpg" alt="Thrall wearing a Bitcoin belt buckle" class="featured-image">
           <div class="image-caption">
-            <p class="caption-title">Thrall, Warchief of the Horde, sporting a Bitcoin belt buckle</p>
-            <p class="caption-subtitle">A creative mashup that symbolized the convergence of gaming and cryptocurrency</p>
+            <p class="caption-title">Whale Wukong is the ocean-born Monkey King, a fusion of ancient legend and modern dominance.</p>
+            <p class="caption-subtitle">Carrying the fearless spirit of Wukong and the sheer power of a whale, he moves the tides, breaks limits, and commands the deep with unstoppable strength—symbolizing intelligence, rebellion, and overwhelming force in one mythical form.</p>
           </div>
         </div>
       </div>
@@ -613,26 +638,30 @@
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
           </svg>
-          <h2>The Historic Article</h2>
+          <h2>The Whale Wukong – What to Expect?</h2>
         </div>
 
         <div class="content-box">
           <p>
-            In April 2012, a young Vitalik Buterin—who would later go on to co-found Ethereum—
-            was writing for Bitcoin Magazine. His article, titled <span class="text-orange" style="font-weight: 600;">
-            "Bitcoin Mining: A New Means of Paying for Video Games,"</span> explored the innovative
-            intersection of gaming and cryptocurrency.
+            Whale Wukong, developed by Game Science, transports players into the legendary world 
+            of Chinese mythology, where ancient gods, mythological creatures, and legendary battles await. 
+            Inspired by the classic tale Journey to the West, this action RPG gives you control of the iconic Monkey King, 
+            Sun Wukong, as he embarks on an epic journey filled with danger, wonder, and intense combat.
           </p>
           <p>
-            What made this article truly memorable wasn't just its forward-thinking content about
-            using Bitcoin mining to fund gaming habits. It was the creative imagery: a portrait of
-            Thrall, the legendary Warchief of the Horde from World of Warcraft, proudly displaying
-            a Bitcoin symbol on his belt buckle.
+          The game presents a visually stunning world with intricate details that bring Chinese folklore to life. 
+          Whether you’re battling fierce demons, solving puzzles, or uncovering Wukong’s deeper purpose, 
+          Whale Wukong offers an immersive experience with rich storytelling and a deep sense of wonder.
           </p>
           <p>
-            This whimsical yet profound image captured the essence of what Buterin was proposing—
-            a future where the virtual economies of gaming worlds and the emerging cryptocurrency
-            ecosystem would intertwine in meaningful ways.
+           With its fast-paced, dynamic combat system, Whale Wukong allows players to utilize Sun Wukong’s transformation 
+           abilities and his iconic staff to defeat enemies in countless creative ways. The game offers a variety of playstyles, 
+           ensuring that no two encounters feel the same. From fluid melee combat to magic and transformation, 
+           the gameplay is designed to keep players on their toes as they navigate through this mythic. 
+          </p>
+          <p>
+            get ready for an unforgettable experience that sets a new standard for action RPGs by blending traditional 
+            folklore with cutting-edge technology and breathtaking visuals.
           </p>
         </div>
       </div>
@@ -646,7 +675,7 @@
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h2>The Symbolic Connection</h2>
+          <h2>Tokenomics</h2>
         </div>
 
         <div class="grid-2">
@@ -655,37 +684,58 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <h3>Virtual Economies</h3>
+            <h3>TOKEN DETAILS</h3>
             <p style="color: #d1d5db;">
-              World of Warcraft pioneered massive virtual economies where players traded gold,
-              items, and services. Thrall, as Warchief, represented leadership in this digital realm.
+              CONTRACT REVOKED <br>
+              LIQUIDITY BURNED<br>
+              TOTAL SUPPLY: 1,000,000,000<br>
+            50% OF SUPPLY ALLOCATED TO GAMING ECOSYSTEM<br>
+            25% TO TEAM & DEVELOPMENT<br>
+            15% TO MARKETING & PARTNERSHIPS<br>
+            10% TO COMMUNITY & REWARDS
             </p>
+            <img src="/wukong_banner.jpg" style="width: 100%; height: auto; border-radius: 10px; margin-top: 15px; border: #3d2b16 5px solid;">
           </div>
 
           <div class="feature-card feature-card-orange">
-            <svg class="icon-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3>Digital Currency</h3>
-            <p style="color: #d1d5db;">
-              Bitcoin represented a revolutionary approach to digital value—decentralized,
-              cryptographically secure, and independent of traditional financial systems.
-            </p>
+              <video autoplay muted loop playsinline style="border: #5a3210 5px solid; border-radius: 15px; width: 100%; height: 100%;">
+    <source src="/vid2.MP4" type="video/mp4">
+    <!-- You can add more source elements for cross-browser compatibility (e.g., .webm or .ogv) -->
+    Your browser does not support the video tag.
+  </video>
           </div>
         </div>
-
+<style>
+    #textToCopy {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 5px;
+        display: inline-block;
+    }
+    button {
+        padding: 15px 15px;
+        background-color: #3d2b16;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    button:hover {
+        background-color: #15612c;
+    }
+    @media screen and (max-width: 568px) {
+        #textToCopy {
+            font-size: 80%;
+        }
+      
+    }
+</style>
         <div class="content-box">
-          <h3>The Vision</h3>
-          <p>
-            Buterin's article proposed using Bitcoin mining as a way to offset gaming costs—
-            a novel concept that recognized the value of computational work in both gaming and
-            cryptocurrency contexts.
-          </p>
-          <p>
-            The image of Thrall wearing Bitcoin symbolized more than just a creative mashup.
-            It represented the potential fusion of gaming culture with the nascent cryptocurrency
-            movement—two digital frontiers that would both shape the future of technology and finance.
-          </p>
+            <p>
+                <strong>Contract Address:</strong><br>
+                <span id="textToCopy">0x196f924f7a158da0e8f6fe1136ca6d809a994e1b</span>
+                <button onclick="copyText()">Copy Address</button>
+            </p>
         </div>
       </div>
     </div>
@@ -694,41 +744,29 @@
   <section class="section-legacy">
     <div class="container">
       <div class="featured-image-container text-center">
-        <h2 style="margin-bottom: 24px;">A Lasting Legacy</h2>
-        <p style="font-size: 20px; color: #d1d5db; margin-bottom: 32px;">
-          Looking back from today's perspective, this article represents a fascinating snapshot
-          in time—when the future co-founder of Ethereum was exploring the intersection of gaming
-          and cryptocurrency, years before blockchain gaming and NFTs would become mainstream concepts.
-        </p>
-        <p style="font-size: 18px; color: #9ca3af; margin-bottom: 48px;">
-          The image of Thrall with his Bitcoin belt remains an iconic reminder of when these two
-          worlds first began to recognize their shared potential.
-        </p>
+        <h2 style="margin-bottom: 24px;">LIVE CHART</h2>
+      
+        <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style><div id="dexscreener-embed"><iframe src="https://dexscreener.com/osmosis/3117-factory_osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4_alloyed_allSOL-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
 
-        <a href="https://web.archive.org/web/20120505132208/http:/bitcoinmagazine.net/bitcoin-mining-a-new-means-of-paying-for-video-games/" target="_blank" rel="noopener noreferrer" class="cta-btn">
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-          </svg>
-          View the Archived Original Article
-        </a>
+
 
         <div class="social-links">
           <div class="grid-3">
-            <a href="https://t.me/ThrallETH" target="_blank" rel="noopener noreferrer" class="social-link">
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-link">
               <img src="images/01.png" alt="Follow on X">
               <div class="social-overlay">
                 <p class="social-text">Join TG</p>
               </div>
             </a>
 
-            <a href="https://x.com/ThrallETH" target="_blank" rel="noopener noreferrer" class="social-link">
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-link">
               <img src="images/02.png" alt="Follow on X">
               <div class="social-overlay">
                 <p class="social-text">Follow on X</p>
               </div>
             </a>
 
-            <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x196f924f7a158da0e8f6fe1136ca6d809a994e1b" target="_blank" rel="noopener noreferrer" class="social-link">
+            <a href="https://www.dextools.io/" target="_blank" rel="noopener noreferrer" class="social-link">
               <img src="images/04.png" alt="Follow on X">
               <div class="social-overlay">
                 <p class="social-text">Chart</p>
@@ -747,11 +785,29 @@
           A tribute to the historic convergence of gaming and cryptocurrency
         </p>
         <p class="footer-small">
-          Article originally published by Vitalik Buterin on April 25, 2012 in Bitcoin Magazine
+          Copyright &copy; 2024 THE WHALE WUKONG. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
 
+
+  <script>
+    function copyText() {
+        // Get the text from the element with id "textToCopy"
+        const textElement = document.getElementById('textToCopy');
+        const text = textElement.innerText; // Use .value for input/textarea elements
+
+        // Write the text to the clipboard using the Clipboard API
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                // Optional: Provide user feedback
+                alert('Text copied to clipboard: ' + text);
+            })
+            .catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+    }
+</script>
 
 </body></html>
