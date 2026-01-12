@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Russo+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="/card.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -667,7 +668,59 @@
       </div>
     </div>
   </section>
+<div class="image-gallary-section">
+	<div class="card">
+		<img src="/m1.jpg" alt="" />
+	</div>
+	<div class="card">
+		<img src="/m2.jpg" alt="" />
+	</div>
+	<div class="card">
+		<img src="/m3.jpg" alt="" />
+	</div>
+	<div class="card">
+		<img src="/m4.jpg" alt="" />
+	</div>    
+	
+</div>
 
+<style>
+.image-gallary-section {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    > :not(:hover) {
+      opacity: 0.4;
+    }
+  }
+
+  .card {
+    transition: transform 0.5s ease;
+    height: 250px;
+    width: auto;
+    border-radius: 10px;
+    overflow: hidden;
+	border: 5px solid #e9b300;
+
+    &:hover {
+      cursor: zoom-in;
+      transform: scale(1.1);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+</style>
   <section class="section-symbolic">
     <div class="container">
       <div class="featured-image-container">
@@ -746,31 +799,66 @@
         <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style><div id="dexscreener-embed"><iframe src="https://dexscreener.com/osmosis/3117-factory_osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4_alloyed_allSOL-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
 
 
+<br><br>
 
-        <div class="social-links">
-          <div class="grid-3">
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <img src="images/01.png" alt="Follow on X">
-              <div class="social-overlay">
-                <p class="social-text">Join TG</p>
-              </div>
-            </a>
+        <h2 style="margin-bottom: 24px;">SOCIALS</h2>
+       <!-- From Uiverse.io by Ashon-G --> 
+<div class="card">
+  <div class="boxshadow"></div>
+  <div class="main">
+    <div class="top"></div>
+    <div class="left side"></div>
+    <div class="right side"></div>
+    <div class="title">LINKS</div>
+    <div class="button-container">
+     
+      <button class="button">
+        <a href="https://t.me">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+</svg>
+      </a></button>
+      
 
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <img src="images/02.png" alt="Follow on X">
-              <div class="social-overlay">
-                <p class="social-text">Follow on X</p>
-              </div>
-            </a>
 
-            <a href="https://www.dextools.io/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <img src="images/04.png" alt="Follow on X">
-              <div class="social-overlay">
-                <p class="social-text">Chart</p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <button class="button">
+        <a href="https://x.com">
+        <svg
+          class="svg twitter"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          width="24"
+          fill="green"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+          ></path>
+        </svg> </a>
+      </button>
+      <button class="button">
+        <svg
+          class="svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="red"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          ></path>
+          <path d="M9 18c-4.51 2-5-2-7-2"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </section>
