@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World of Warcraft’s Warchief - $Thrall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Russo+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #f4a461, 0 0 20px #f4a461, 0 0 30px #f4a461; }
+      50% { text-shadow: 0 0 20px #f4a461, 0 0 40px #f4a461, 0 0 60px #f4a461; }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    body {
+      font-family: 'Russo One', sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      background: linear-gradient(-45deg, #2b1d1a, #8b5a2b, #1a1410, #3d2a1f);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+      z-index: 1;
+    }
+
+    .header-image-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/2.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+
+    nav {
+      position: relative;
+      z-index: 20;
+      padding: 24px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+      color: #f4a461;
+    }
+
+    .logo-text {
+      font-family: 'Bangers', cursive;
+      font-size: 28px;
+      font-weight: bold;
+      color: #f4a461;
+      animation: pulse 2s ease-in-out infinite;
+      letter-spacing: 2px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #d97532;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #c95a1e;
+      transform: scale(1.05) rotate(-2deg);
+      box-shadow: 0 5px 20px rgba(244, 164, 97, 0.5);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 20;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .hero-icons svg:first-child {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero-icons svg:last-child {
+      animation: spin 4s linear infinite;
+    }
+
+    .hero-icons svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .icon-green {
+      color: #5a7a4e;
+    }
+
+    .icon-orange {
+      color: #f4a461;
+    }
+
+    h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 24px;
+      line-height: 1.2;
+      animation: glow 2s ease-in-out infinite;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .text-orange {
+      color: #f4a461;
+      display: inline-block;
+      animation: shake 3s ease-in-out infinite;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      color: #d1d5db;
+      margin-bottom: 32px;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: #9ca3af;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: slideInRight 1s ease-out;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-featured {
+      background: linear-gradient(to bottom, #2b1d1a, #3d2a1f);
+    }
+
+    .section-story {
+      background: #3d2a1f;
+    }
+
+    .section-symbolic {
+      background: linear-gradient(to bottom, #3d2a1f, #2b1d1a);
+    }
+
+    .section-legacy {
+      background: #2b1d1a;
+    }
+
+    .featured-image-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .featured-image-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      border: 4px solid rgba(217, 117, 50, 0.4);
+      animation: fadeInUp 1s ease-out;
+      transition: transform 0.3s;
+    }
+
+    .featured-image-wrapper:hover {
+      transform: scale(1.02) rotate(1deg);
+      box-shadow: 0 30px 60px -12px rgba(244, 164, 97, 0.6);
+    }
+
+    .featured-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      padding: 32px;
+    }
+
+    .caption-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .caption-subtitle {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .section-header svg {
+      width: 32px;
+      height: 32px;
+      color: #f4a461;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    h2 {
+      font-family: 'Bangers', cursive;
+      font-size: 42px;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .content-box {
+      background: rgba(43, 29, 26, 0.5);
+      border-radius: 12px;
+      padding: 32px;
+      border: 1px solid rgba(217, 117, 50, 0.2);
+      margin-bottom: 32px;
+      animation: fadeInUp 1s ease-out;
+      transition: all 0.3s;
+    }
+
+    .content-box:hover {
+      background: rgba(43, 29, 26, 0.7);
+      border-color: rgba(244, 164, 97, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .content-box p {
+      color: #d1d5db;
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+
+    .content-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .feature-card {
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid rgba(90, 122, 78, 0.3);
+      animation: fadeInUp 1s ease-out;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-card:nth-child(1) {
+      animation-delay: 0.2s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .feature-card:nth-child(2) {
+      animation-delay: 0.4s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .feature-card-green {
+      background: linear-gradient(to bottom right, rgba(61, 92, 58, 0.3), rgba(90, 122, 78, 0.2));
+    }
+
+    .feature-card-orange {
+      background: linear-gradient(to bottom right, rgba(201, 90, 30, 0.3), rgba(217, 117, 50, 0.2));
+      border-color: rgba(217, 117, 50, 0.3);
+    }
+
+    .feature-card svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover svg {
+      transform: scale(1.2) rotate(360deg);
+    }
+
+    h3 {
+      font-family: 'Bangers', cursive;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      background: linear-gradient(to right, #d97532, #c95a1e);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(to right, #f4a461, #d97532);
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 10px 30px rgba(244, 164, 97, 0.6);
+      animation: none;
+    }
+
+    .social-links {
+      margin-top: 64px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .social-link {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(217, 117, 50, 0.3);
+      aspect-ratio: 1;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      border-color: #f4a461;
+      transform: scale(1.05) rotate(-3deg);
+      box-shadow: 0 15px 40px rgba(244, 164, 97, 0.5);
+    }
+
+    .social-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+
+    .social-link:hover img {
+      opacity: 1;
+    }
+
+    .social-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 16px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .social-link:hover .social-overlay {
+      opacity: 1;
+    }
+
+    .social-text {
+      color: white;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 48px 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(217, 117, 50, 0.2);
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-text {
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .footer-small {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-image-bg"></div>
+
+    <nav>
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+            <span class="logo-text">THRALL</span>
+          </div>
+          <a href="https://web.archive.org/web/20120505132208/http:/bitcoinmagazine.net/bitcoin-mining-a-new-means-of-paying-for-video-games/" target="_blank" rel="noopener noreferrer" class="nav-btn">
+            Read Original Article
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-icons">
+        <svg class="icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <svg class="icon-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <h1>World of Warcraft’s Warchief <span class="text-orange">THRALL</span></h1>
+      <p class="hero-subtitle">CA: 0xE2E48EF406eB5765F8E072D74223E00bDa902e0d</p>
+      <p class="hero-description">
+        On April 25, 2012, an 18-year-old Vitalik Buterin published a visionary article
+        that would forever link World of Warcraft's legendary Warchief with the future of digital currency.
+      </p>
+    </div>
+  </header>
+
+  <section class="section-featured">
+    <div class="container">
+      <div class="featured-image-container">
+        <div class="featured-image-wrapper">
+          <img src="images/1.png" alt="Thrall wearing a Bitcoin belt buckle" class="featured-image">
+          <div class="image-caption">
+            <p class="caption-title">Thrall, Warchief of the Horde, sporting a Bitcoin belt buckle</p>
+            <p class="caption-subtitle">A creative mashup that symbolized the convergence of gaming and cryptocurrency</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-story">
+    <div class="container">
+      <div class="featured-image-container">
+        <div class="section-header">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <h2>The Historic Article</h2>
+        </div>
+
+        <div class="content-box">
+          <p>
+            In April 2012, a young Vitalik Buterin—who would later go on to co-found Ethereum—
+            was writing for Bitcoin Magazine. His article, titled <span class="text-orange" style="font-weight: 600;">
+            "Bitcoin Mining: A New Means of Paying for Video Games,"</span> explored the innovative
+            intersection of gaming and cryptocurrency.
+          </p>
+          <p>
+            What made this article truly memorable wasn't just its forward-thinking content about
+            using Bitcoin mining to fund gaming habits. It was the creative imagery: a portrait of
+            Thrall, the legendary Warchief of the Horde from World of Warcraft, proudly displaying
+            a Bitcoin symbol on his belt buckle.
+          </p>
+          <p>
+            This whimsical yet profound image captured the essence of what Buterin was proposing—
+            a future where the virtual economies of gaming worlds and the emerging cryptocurrency
+            ecosystem would intertwine in meaningful ways.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-symbolic">
+    <div class="container">
+      <div class="featured-image-container">
+        <div class="section-header">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h2>The Symbolic Connection</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="feature-card feature-card-green">
+            <svg class="icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>Virtual Economies</h3>
+            <p style="color: #d1d5db;">
+              World of Warcraft pioneered massive virtual economies where players traded gold,
+              items, and services. Thrall, as Warchief, represented leadership in this digital realm.
+            </p>
+          </div>
+
+          <div class="feature-card feature-card-orange">
+            <svg class="icon-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>Digital Currency</h3>
+            <p style="color: #d1d5db;">
+              Bitcoin represented a revolutionary approach to digital value—decentralized,
+              cryptographically secure, and independent of traditional financial systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>The Vision</h3>
+          <p>
+            Buterin's article proposed using Bitcoin mining as a way to offset gaming costs—
+            a novel concept that recognized the value of computational work in both gaming and
+            cryptocurrency contexts.
+          </p>
+          <p>
+            The image of Thrall wearing Bitcoin symbolized more than just a creative mashup.
+            It represented the potential fusion of gaming culture with the nascent cryptocurrency
+            movement—two digital frontiers that would both shape the future of technology and finance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-legacy">
+    <div class="container">
+      <div class="featured-image-container text-center">
+        <h2 style="margin-bottom: 24px;">A Lasting Legacy</h2>
+        <p style="font-size: 20px; color: #d1d5db; margin-bottom: 32px;">
+          Looking back from today's perspective, this article represents a fascinating snapshot
+          in time—when the future co-founder of Ethereum was exploring the intersection of gaming
+          and cryptocurrency, years before blockchain gaming and NFTs would become mainstream concepts.
+        </p>
+        <p style="font-size: 18px; color: #9ca3af; margin-bottom: 48px;">
+          The image of Thrall with his Bitcoin belt remains an iconic reminder of when these two
+          worlds first began to recognize their shared potential.
+        </p>
+
+        <a href="https://web.archive.org/web/20120505132208/http:/bitcoinmagazine.net/bitcoin-mining-a-new-means-of-paying-for-video-games/" target="_blank" rel="noopener noreferrer" class="cta-btn">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+          View the Archived Original Article
+        </a>
+
+        <div class="social-links">
+          <div class="grid-3">
+            <a href="https://t.me/ThrallETH" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/01.png" alt="Follow on X">
+              <div class="social-overlay">
+                <p class="social-text">Join TG</p>
+              </div>
+            </a>
+
+            <a href="https://x.com/ThrallETH" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/02.png" alt="Follow on X">
+              <div class="social-overlay">
+                <p class="social-text">Follow on X</p>
+              </div>
+            </a>
+
+            <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x196f924f7a158da0e8f6fe1136ca6d809a994e1b" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/04.png" alt="Follow on X">
+              <div class="social-overlay">
+                <p class="social-text">Chart</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          A tribute to the historic convergence of gaming and cryptocurrency
+        </p>
+        <p class="footer-small">
+          Article originally published by Vitalik Buterin on April 25, 2012 in Bitcoin Magazine
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>
